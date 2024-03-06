@@ -1,0 +1,16 @@
+﻿@model NightIV.Models.Movie
+@using NightIV.Models
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if(Model != null )
+            {
+                <h3>@Model.Name</h3>
+            }
+ else
+            {
+                <p>There is no Movie yet!</p>
+            }
