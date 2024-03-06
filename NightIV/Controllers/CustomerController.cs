@@ -28,11 +28,11 @@ namespace NightIV.Controllers
         public ActionResult New()
         {
             var memberShipTypes = _context.MembershipsTypes.ToList();
-            var viewModel = new NewCustomerViewModel
+            var viewModel = new CustomerFormViewModel
             {
                 MemberShipTypes = memberShipTypes
             };
-            return View(viewModel);
+            return View("CustomerForm",viewModel);
         }
 
         [HttpPost]
@@ -42,6 +42,23 @@ namespace NightIV.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Customer");
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new CustomerFormViewModel
+            {
+                Customer = customer,
+                MemberShipTypes = _context.MembershipsTypes.ToList()
+            };
+
+            return View("CustomerForm",viewModel);
         }
 
 

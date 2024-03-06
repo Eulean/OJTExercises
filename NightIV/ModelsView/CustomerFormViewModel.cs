@@ -6,7 +6,7 @@ using System.Web;
 
 namespace NightIV.ModelsView
 {
-    public class NewCustomerViewModel
+    public class CustomerFormViewModel
     {
         public IEnumerable<MemberShipTypes> MemberShipTypes { get; set; }
         public Customer Customer { get; set; }
