@@ -12,6 +12,7 @@ namespace NightIV.Context
         
             public DbSet<Customer> Customers { get; set; }
             public DbSet<Movie> Movies { get; set; }
+            public DbSet<MemberShipTypes> MembershipsTypes { get; set; }
         
     }
 }

@@ -173,6 +173,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelsView\CustomerView.cs" />
     <Compile Include="ModelsView\MovieView.cs" />
+    <Compile Include="ModelsView\NewCustomerViewModel.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\MemberShipTypes.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -234,6 +235,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Movie\Movie.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Customer\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

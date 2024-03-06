@@ -1,5 +1,8 @@
-﻿@model NightIV.ModelsView.MovieView
+﻿@*@model NightIV.ModelsView.MovieView
+@using NightIV.Models*@
+@model IEnumerable<NightIV.Models.Movie>
 @using NightIV.Models
+
 @{
     ViewBag.Title = "Movie";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,7 +10,7 @@
 
 <h2>Movie</h2>
 
-@if (Model.Movie.Any())
+@if (Model.Any())
             {
     <table class="table table-hover">
         <thead>
@@ -17,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach(var movies in Model.Movie)
+            @foreach(var movies in Model)
                 {
                     <tr>
                         <td>@movies.Id</td>

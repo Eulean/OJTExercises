@@ -24,7 +24,25 @@ namespace NightIV.Controllers
         {
             _context.Dispose();
         }
+       
+        public ActionResult New()
+        {
+            var memberShipTypes = _context.MembershipsTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MemberShipTypes = memberShipTypes
+            };
+            return View(viewModel);
+        }
 
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+
+            return RedirectToAction("Customer");
+        }
 
 
 
