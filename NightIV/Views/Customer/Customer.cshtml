@@ -9,9 +9,12 @@
 
 <h2>Customer</h2>
 
+@Html.ActionLink("New Customer", "New", "Customer", null, new { @class = " btn btn-primary" })
+
 
 @if (Model.Any())
 {
+
     <table class="table table-hover table-striped">
         <thead>
             <tr>

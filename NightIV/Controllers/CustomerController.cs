@@ -36,9 +36,22 @@ namespace NightIV.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Customer customer)
+        public ActionResult Save(Customer customer)
         {
-            _context.Customers.Add(customer);
+            if( customer.Id == 0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+
+                    // Mapper.Map(customer, customerInDb);
+
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthday = customer.Birthday;  
+                customerInDb.MemberShipTypeId = customer.MemberShipTypeId;
+                customerInDb.MemberShipType = customer.MemberShipType;
+                customerInDb.IsSubscribed = customer.IsSubscribed;
+            }
             _context.SaveChanges();
 
             return RedirectToAction("Customer");
