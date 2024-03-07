@@ -19,7 +19,7 @@ namespace NightIV.Models
         [Display(Name ="Release Date")]
         public DateTime ReleaseDate { get; set; }
 
-        public DateTime DateAdded { get; set; } = DateTime.Now;
+        public DateTime DateAdded { get; set; } = DateTime.UtcNow;
 
         [Required]
         [Display(Name = "Number of Stock")]

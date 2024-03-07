@@ -4,7 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Title</h2>
+
+<h3>@Model.Title</h3>
+
 
 
 @using (Html.BeginForm("Save", "Movie"))
@@ -15,7 +17,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ReleaseDate)
-        @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MM yyy}", new { @class = "form-control mb-2" })
+        @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control mb-2" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.GenresId)

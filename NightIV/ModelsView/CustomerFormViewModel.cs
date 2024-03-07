@@ -12,3 +12,5 @@ namespace NightIV.ModelsView
         public Customer Customer { get; set; }
     }
 }
+
+

@@ -29,7 +29,8 @@ namespace NightIV.Controllers
             var genres = _context.Genres.ToList();
             var viewModel = new MovieView
             {
-                Genres = genres
+                Genres = genres,
+                Id = 0
             };
 
             return View("New", viewModel);
@@ -49,7 +50,7 @@ namespace NightIV.Controllers
                 var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
 
                 // Mapper.Map(customer, customerInDb);
-
+                movieInDb.Id = movie.Id;
                 movieInDb.Name = movie.Name;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.Stock = movie.Stock;
@@ -58,6 +59,25 @@ namespace NightIV.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Movie");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieView
+            {
+                Id = movie.Id,
+                Name = movie.Name,
+                GenresId = movie.GenresId,
+                Stock = movie.Stock,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("New", viewModel);
         }
 
 

@@ -1,5 +1,5 @@
 ﻿@*@model NightIV.ModelsView.MovieView
-@using NightIV.Models*@
+    @using NightIV.Models*@
 @model IEnumerable<NightIV.Models.Movie>
 @using NightIV.Models
 
@@ -10,27 +10,32 @@
 
 <h2>Movie</h2>
 
+@Html.ActionLink("New Movie", "New", "Movie", null, new { @class = " btn btn-primary" })
+
+
 @if (Model.Any())
-            {
+{
     <table class="table table-hover">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Movies</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach(var movies in Model)
-                {
-                    <tr>
-                        <td>@movies.Id</td>
-                        <td>@Html.ActionLink(movies.Name, "Details", "Movie", new { Id = movies.Id }, new {@class=""})</td>
-                    </tr>
-                }
+            @foreach (var movies in Model)
+            {
+                <tr>
+                    <td>@movies.Id</td>
+                    <td>@Html.ActionLink(movies.Name, "Details", "Movie", new { Id = movies.Id }, new { @class = "" })</td>
+                    <td>@Html.ActionLink("Edit", "Edit", "Movie", new { Id = movies.Id }, new { @class = "btn btn-primary" })</td>
+                </tr>
+            }
         </tbody>
     </table>
-            }
- else
-            {
-                <p>There is no Movies yet!</p>
-            }
+}
+else
+{
+    <p>There is no Movies yet!</p>
+}

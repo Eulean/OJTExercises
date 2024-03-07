@@ -34,9 +34,10 @@ namespace NightIV.ModelsView
         {
             get
             {
-                return Id != 0 ? "Edit Movie" : "New Movie";
+                return Id == 0 ? "New Movie" : "Edit Movie";
             }
         }
+
 
         public MovieView()
         {
