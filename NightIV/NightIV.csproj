@@ -170,11 +170,32 @@
     <Compile Include="Migrations\202403051024256_updatingMovieModel.Designer.cs">
       <DependentUpon>202403051024256_updatingMovieModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403070323342_UpdateMovieModel.cs" />
+    <Compile Include="Migrations\202403070323342_UpdateMovieModel.Designer.cs">
+      <DependentUpon>202403070323342_UpdateMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403070407198_updatMivieDatabaseagain.cs" />
+    <Compile Include="Migrations\202403070407198_updatMivieDatabaseagain.Designer.cs">
+      <DependentUpon>202403070407198_updatMivieDatabaseagain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403070410195_movieModelUpdate.cs" />
+    <Compile Include="Migrations\202403070410195_movieModelUpdate.Designer.cs">
+      <DependentUpon>202403070410195_movieModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403070434395_updateModel.cs" />
+    <Compile Include="Migrations\202403070434395_updateModel.Designer.cs">
+      <DependentUpon>202403070434395_updateModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403070524035_ModelViewsUpdate.cs" />
+    <Compile Include="Migrations\202403070524035_ModelViewsUpdate.Designer.cs">
+      <DependentUpon>202403070524035_ModelViewsUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelsView\CustomerView.cs" />
     <Compile Include="ModelsView\MovieView.cs" />
     <Compile Include="ModelsView\CustomerFormViewModel.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\MemberShipTypes.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +257,7 @@
     <Content Include="Views\Movie\Movie.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -294,6 +316,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403051024256_updatingMovieModel.resx">
       <DependentUpon>202403051024256_updatingMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403070323342_UpdateMovieModel.resx">
+      <DependentUpon>202403070323342_UpdateMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403070407198_updatMivieDatabaseagain.resx">
+      <DependentUpon>202403070407198_updatMivieDatabaseagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403070410195_movieModelUpdate.resx">
+      <DependentUpon>202403070410195_movieModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403070434395_updateModel.resx">
+      <DependentUpon>202403070434395_updateModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403070524035_ModelViewsUpdate.resx">
+      <DependentUpon>202403070524035_ModelViewsUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,34 @@
+﻿@model NightIV.ModelsView.MovieView
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+
+
+@using (Html.BeginForm("Save", "Movie"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control mb-2" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ReleaseDate)
+        @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MM yyy}", new { @class = "form-control mb-2" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.GenresId)
+        @Html.DropDownListFor(m => m.GenresId, new SelectList(Model.Genres, "Id", "Name"), "Select Genres", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Stock)
+        @Html.TextBoxFor(m => m.Stock, new { @class = "form-control mb-2" })
+    </div>
+
+    @Html.HiddenFor(m => m.Id)
+
+    <button type="submit" class="btn btn-primary ">Save</button>
+
+}

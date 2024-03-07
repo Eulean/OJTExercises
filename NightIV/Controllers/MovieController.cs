@@ -24,6 +24,43 @@ namespace NightIV.Controllers
             _context.Dispose();
         }
 
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+            var viewModel = new MovieView
+            {
+                Genres = genres
+            };
+
+            return View("New", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
+
+                // Mapper.Map(customer, customerInDb);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.Stock = movie.Stock;
+                movieInDb.GenresId = movie.GenresId;
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Movie");
+        }
+
+
         // GET: Movie
         [Route("Movie")]
         public ActionResult Movie()
