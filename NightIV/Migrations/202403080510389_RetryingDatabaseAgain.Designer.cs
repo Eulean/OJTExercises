@@ -7,13 +7,13 @@ namespace NightIV.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class addNameToMemberShipTypes : IMigrationMetadata
+    public sealed partial class RetryingDatabaseAgain : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addNameToMemberShipTypes));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RetryingDatabaseAgain));
         
         string IMigrationMetadata.Id
         {
-            get { return "202403050910563_addNameToMemberShipTypes"; }
+            get { return "202403080510389_RetryingDatabaseAgain"; }
         }
         
         string IMigrationMetadata.Source

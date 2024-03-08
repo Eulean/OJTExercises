@@ -134,61 +134,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202403040952492_IVNight.cs" />
-    <Compile Include="Migrations\202403040952492_IVNight.Designer.cs">
-      <DependentUpon>202403040952492_IVNight.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403041005370_IsSubscribed.cs" />
-    <Compile Include="Migrations\202403041005370_IsSubscribed.Designer.cs">
-      <DependentUpon>202403041005370_IsSubscribed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403041010565_AddMemberShipType.cs" />
-    <Compile Include="Migrations\202403041010565_AddMemberShipType.Designer.cs">
-      <DependentUpon>202403041010565_AddMemberShipType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403041018256_InsertMemberShipTypes.cs" />
-    <Compile Include="Migrations\202403041018256_InsertMemberShipTypes.Designer.cs">
-      <DependentUpon>202403041018256_InsertMemberShipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403050805379_ApplyAnotationToCustomerName.cs" />
-    <Compile Include="Migrations\202403050805379_ApplyAnotationToCustomerName.Designer.cs">
-      <DependentUpon>202403050805379_ApplyAnotationToCustomerName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403050910563_addNameToMemberShipTypes.cs" />
-    <Compile Include="Migrations\202403050910563_addNameToMemberShipTypes.Designer.cs">
-      <DependentUpon>202403050910563_addNameToMemberShipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403050921121_updateMemberShipTypes.cs" />
-    <Compile Include="Migrations\202403050921121_updateMemberShipTypes.Designer.cs">
-      <DependentUpon>202403050921121_updateMemberShipTypes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403050953324_updatBirthdayToCustomer.cs" />
-    <Compile Include="Migrations\202403050953324_updatBirthdayToCustomer.Designer.cs">
-      <DependentUpon>202403050953324_updatBirthdayToCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403051024256_updatingMovieModel.cs" />
-    <Compile Include="Migrations\202403051024256_updatingMovieModel.Designer.cs">
-      <DependentUpon>202403051024256_updatingMovieModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403070323342_UpdateMovieModel.cs" />
-    <Compile Include="Migrations\202403070323342_UpdateMovieModel.Designer.cs">
-      <DependentUpon>202403070323342_UpdateMovieModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403070407198_updatMivieDatabaseagain.cs" />
-    <Compile Include="Migrations\202403070407198_updatMivieDatabaseagain.Designer.cs">
-      <DependentUpon>202403070407198_updatMivieDatabaseagain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403070410195_movieModelUpdate.cs" />
-    <Compile Include="Migrations\202403070410195_movieModelUpdate.Designer.cs">
-      <DependentUpon>202403070410195_movieModelUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403070434395_updateModel.cs" />
-    <Compile Include="Migrations\202403070434395_updateModel.Designer.cs">
-      <DependentUpon>202403070434395_updateModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403070524035_ModelViewsUpdate.cs" />
-    <Compile Include="Migrations\202403070524035_ModelViewsUpdate.Designer.cs">
-      <DependentUpon>202403070524035_ModelViewsUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\202403080510389_RetryingDatabaseAgain.cs" />
+    <Compile Include="Migrations\202403080510389_RetryingDatabaseAgain.Designer.cs">
+      <DependentUpon>202403080510389_RetryingDatabaseAgain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelsView\CustomerView.cs" />
@@ -197,6 +145,8 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genres.cs" />
     <Compile Include="Models\MemberShipTypes.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
+    <Compile Include="Models\Min1Stock.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -290,47 +240,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202403040952492_IVNight.resx">
-      <DependentUpon>202403040952492_IVNight.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403041005370_IsSubscribed.resx">
-      <DependentUpon>202403041005370_IsSubscribed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403041010565_AddMemberShipType.resx">
-      <DependentUpon>202403041010565_AddMemberShipType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403041018256_InsertMemberShipTypes.resx">
-      <DependentUpon>202403041018256_InsertMemberShipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403050805379_ApplyAnotationToCustomerName.resx">
-      <DependentUpon>202403050805379_ApplyAnotationToCustomerName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403050910563_addNameToMemberShipTypes.resx">
-      <DependentUpon>202403050910563_addNameToMemberShipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403050921121_updateMemberShipTypes.resx">
-      <DependentUpon>202403050921121_updateMemberShipTypes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403050953324_updatBirthdayToCustomer.resx">
-      <DependentUpon>202403050953324_updatBirthdayToCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403051024256_updatingMovieModel.resx">
-      <DependentUpon>202403051024256_updatingMovieModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403070323342_UpdateMovieModel.resx">
-      <DependentUpon>202403070323342_UpdateMovieModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403070407198_updatMivieDatabaseagain.resx">
-      <DependentUpon>202403070407198_updatMivieDatabaseagain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403070410195_movieModelUpdate.resx">
-      <DependentUpon>202403070410195_movieModelUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403070434395_updateModel.resx">
-      <DependentUpon>202403070434395_updateModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403070524035_ModelViewsUpdate.resx">
-      <DependentUpon>202403070524035_ModelViewsUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202403080510389_RetryingDatabaseAgain.resx">
+      <DependentUpon>202403080510389_RetryingDatabaseAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

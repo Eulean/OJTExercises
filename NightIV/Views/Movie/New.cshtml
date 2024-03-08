@@ -14,19 +14,24 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
         @Html.TextBoxFor(m => m.Name, new { @class = "form-control mb-2" })
+        @Html.ValidationMessageFor(m => m.Name)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ReleaseDate)
         @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control mb-2" })
+        @Html.ValidationMessageFor(m => m.ReleaseDate)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.GenresId)
         @Html.DropDownListFor(m => m.GenresId, new SelectList(Model.Genres, "Id", "Name"), "Select Genres", new { @class = "form-control" })
-    </div>
+        @Html.ValidationMessageFor(m => m.GenresId)
+   </div>
+
 
     <div class="form-group">
         @Html.LabelFor(m => m.Stock)
         @Html.TextBoxFor(m => m.Stock, new { @class = "form-control mb-2" })
+        @Html.ValidationMessageFor(m => m.Stock)
     </div>
 
     @Html.HiddenFor(m => m.Id)

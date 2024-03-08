@@ -11,23 +11,26 @@ namespace NightIV.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Pls Enter Customer Name")]
         [StringLength(50)]
         public string Name { get; set; }
 
         [Display(Name="Date of Birth")]
-        public DateTime Birthday { get; set; }
+        [Min18YearsIfAMember]
+        public DateTime? Birthday { get; set; }
 
         /*[Required]
         [StringLength(50)]
         public string Email { get; set; }
         public string Password { get; set; }*/
 
+        
         public bool IsSubscribed { get; set; }
 
 
         public MemberShipTypes MemberShipType { get; set; }
 
+        [Required]
         [Display(Name = "Membership Type")]
         public byte MemberShipTypeId { get; set; }
     }
